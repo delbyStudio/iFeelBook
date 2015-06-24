@@ -20,7 +20,6 @@
 
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
-    <gap:plugin name="nl.x-services.plugins.toast" source="plugins.cordova.io" />
     
     <access origin="*" />
 

@@ -24,7 +24,7 @@ $scope.back();
   ];
 })
 
-.controller('QuoteCtrl', function($scope, $interval, $ionicLoading, $resource, $stateParams, $ionicScrollDelegate, $ionicActionSheet, $cordovaSocialSharing, $cordovaToast){
+.controller('QuoteCtrl', function($scope, $interval, $ionicLoading, $resource, $stateParams, $ionicScrollDelegate, $cordovaSocialSharing){
 
 $scope.vai = function(){
   if($stateParams.tag==null)
@@ -75,23 +75,8 @@ $scope.vai = function(){
 
 $scope.vai();
 
-$scope.onHold = function() {
-	$ionicActionSheet.show({
-     buttons: [
-       { text: 'Condividi' }
-     ],
-     cancelText: 'Annulla',
-     buttonClicked: function(index) {
-     	$cordovaSocialSharing
-    		.share($scope.cit+$scope.aut, null, null, null)
-    		.then(function(result) {
-      			$cordovaToast.show('Quote published with success!', 'long', 'center');
-    		}, function(err) {
-      			$cordovaToast.show('Error in publishing quote!', 'long', 'center');
-    		});
-       return true;
-     }
-   })
-}
-
+$scope.onHold = function() 
+	{
+     	$cordovaSocialSharing.share($scope.cit+$scope.aut, null, null, null);
+	}
 })
