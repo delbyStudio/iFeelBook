@@ -3,17 +3,13 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.ifeelbook.www"
-        version   = "1.0">
+        version   = "0.2">
 
     <name>iFeelBook</name>
 
-    <description>
-        Emotional Quotes
-    </description>
+    <description>Emotional Quotes</description>
 
-    <author email="dlbdvd96@hotmail.it">
-        Davide del Buono
-    </author>
+    <author email="dlbdvd96@hotmail.it">Davide del Buono</author>
 
     <preference name='phonegap-version' value="cli-5.1.1"/>
     <preference name="orientation" value="portrait" />  
