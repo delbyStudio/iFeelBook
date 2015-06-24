@@ -77,6 +77,6 @@ $scope.vai();
 
 $scope.onHold = function() 
 	{
-     	$cordovaSocialSharing.share($scope.cit+$scope.aut, null, null, null);
+     	$cordovaSocialSharing.share($scope.cit+"\n"+$scope.aut, null, null, null);
 	}
 })
