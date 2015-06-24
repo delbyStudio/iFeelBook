@@ -1,4 +1,4 @@
-angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate'])
+angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova'])
 
 .controller('AppCtrl', function($scope) {
   $scope.back = function(){
@@ -20,11 +20,11 @@ $scope.back();
     { title: '<i class="icon ion-heart"></i>Lovely', tag: "love" },
     { title: '<i class="icon ion-happy"></i>Funny', tag: "humor" },
     { title: '<i class="icon ion-flash"></i>Determinate', tag: "life" },
-    { title: '<i class="icon ion-android-bulb"></i>Inspired', tag: "inspirational" }
+    { title: '<i class="icon ion-lightbulb"></i>Inspired', tag: "inspirational" }
   ];
 })
 
-.controller('QuoteCtrl', function($scope, $interval, $ionicLoading, $resource, $stateParams, $ionicScrollDelegate){
+.controller('QuoteCtrl', function($scope, $interval, $ionicLoading, $resource, $stateParams, $ionicScrollDelegate, $ionicActionSheet, $cordovaSocialSharing, $cordovaToast){
 
 $scope.vai = function(){
   if($stateParams.tag==null)
@@ -66,22 +66,6 @@ $scope.vai = function(){
       $scope.cit = $scope.giorni.results[rx].quotetext_content;
       var i = $scope.cit.indexOf('―');
       var f = $scope.cit.length;
-      if($scope.cit.length>250 && $scope.cit.length<400)
-        {
-          $scope.mCit = true;
-          $scope.lCit = false;
-        }
-      else if($scope.cit.length>400)
-          {
-          $scope.lCit = true;
-          $scope.mCit = false;
-          }
-        else
-        {
-          $scope.lCit = false;
-          $scope.mCit = false;
-        }
-
       $scope.aut = $scope.cit.substring(i, f);
       $scope.cit = $scope.cit.substring(0, i-1);
     }
@@ -90,5 +74,24 @@ $scope.vai = function(){
 }
 
 $scope.vai();
+
+$scope.onHold = function() {
+	$ionicActionSheet.show({
+     buttons: [
+       { text: 'Condividi' }
+     ],
+     cancelText: 'Annulla',
+     buttonClicked: function(index) {
+     	$cordovaSocialSharing
+    		.share($scope.cit+$scope.aut, null, null, null)
+    		.then(function(result) {
+      			$cordovaToast.show('Quote published with success!', 'long', 'center');
+    		}, function(err) {
+      			$cordovaToast.show('Error in publishing quote!', 'long', 'center');
+    		});
+       return true;
+     }
+   })
+}
 
 })
