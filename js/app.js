@@ -41,5 +41,6 @@ angular.module('ifeelbook', ['ionic', 'ifeelbook.controllers'])
   });
 
   $urlRouterProvider.otherwise('/app/quotes');
-  $ionicConfigProvider.views.transition('none');
+  $ionicConfigProvider.views.transition('ios');
+  $ionicConfigProvider.navBar.alignTitle('center')
 });

@@ -5,7 +5,7 @@
 <div class="bar bar-subheader bar-positive">
   <h2 class="title">Today I'm feeling...</h2>
 </div>
-  <ion-content class="has-subheader">
+  <ion-content class="has-subheader" has-bouncing="true">
     <ion-list>
       <ion-item ng-repeat="quote in feelings" class="item-icon-left" nav-transition="none" href="#/app/quotes/{{quote.tag}}">
         <span ng-bind-html="quote.title"></span>
