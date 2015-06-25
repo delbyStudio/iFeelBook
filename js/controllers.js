@@ -1,8 +1,20 @@
 angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova'])
 
-.controller('AppCtrl', function($scope, $cordovaNetwork, $ionicPopup) {
+.controller('AppCtrl', function($scope, $cordovaNetwork, $ionicPopup, $cordovaLocalNotification) {
 
  document.addEventListener("deviceready", function () {
+
+      var now = new Date().getTime();
+      var _10SecondsFromNow = new Date(now + 15 * 1000);
+
+      $cordovaLocalNotification.schedule({
+        id: 1,
+        title: "Today I'm feeling...",
+        text: 'A quotes is ready for you!',
+        at: _10SecondsFromNow
+      }).then(function (result) {
+        // ...
+      });
 
     $scope.showAlert = function() {
          var alertPopup = $ionicPopup.alert({
