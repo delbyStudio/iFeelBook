@@ -26,11 +26,13 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
           $scope.reloadNetwork();
          });
        }
-
+       
+       if (window.Connection) {
        $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
           //$scope.showAlert();
           alert('offline');
         })
+      }
 
       $scope.reloadNetwork = function() {
         var isOffline = $cordovaNetwork.isOffline();
