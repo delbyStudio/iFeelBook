@@ -10,6 +10,16 @@ angular.module('ifeelbook', ['ionic', 'ifeelbook.controllers'])
     controller: 'AppCtrl'
   })
 
+  .state('app.settings', {
+      url: "/settings",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/settings.html",
+          controller: 'SettingsCtrl'
+        }
+      }
+    })
+
     .state('app.quotes', {
       url: "/quotes",
       views: {

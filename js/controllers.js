@@ -45,7 +45,7 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
         var isOffline = $cordovaNetwork.isOffline();
         if(isOffline)
           $scope.showAlert();
-    }
+        }
 
  })
 
