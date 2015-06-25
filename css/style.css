@@ -44,6 +44,11 @@ background-color: #11c1f3;
 .assertive {
   background-color: #ef473a;
 }
+
+.text-assertive {
+  color: #ef473a;
+}
+
 .royal {
   background-color: #886aea;
 }

@@ -1,6 +1,31 @@
 angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova'])
 
-.controller('AppCtrl', function($scope) {
+.controller('AppCtrl', function($scope, $cordovaNetwork, $ionicPopup) {
+
+ document.addEventListener("deviceready", function () {
+
+    $scope.showAlert = function() {
+         var alertPopup = $ionicPopup.alert({
+           title: '<span class="text-assertive">Connection error!</span>',
+           template: 'Check your connection and try again.'
+         });
+         alertPopup.then(function(res) {
+           $scope.reloadNetwork();
+         });
+       }
+
+    $scope.reloadNetwork = function() {
+    var isOffline = $cordovaNetwork.isOffline();
+    if(isOffline)
+    {
+      $scope.showAlert();
+      }
+    }
+
+    $scope.reloadNetwork();
+
+ })
+
   $scope.back = function(){
     $scope.colour=[0,1,2,3,4];
     function rfx(){ return Math.floor((Math.random() * 5));}
@@ -22,6 +47,7 @@ $scope.back();
     { title: '<i class="icon ion-flash"></i>Determinate', tag: "life" },
     { title: '<i class="icon ion-lightbulb"></i>Inspired', tag: "inspirational" }
   ];
+
 })
 
 .controller('QuoteCtrl', function($scope, $interval, $ionicLoading, $resource, $stateParams, $ionicScrollDelegate, $cordovaSocialSharing){
@@ -75,7 +101,7 @@ $scope.vai = function(){
 
 $scope.vai();
 
-$scope.onHold = function() 
+$scope.onSwipeUp = function() 
 	{
      	$cordovaSocialSharing.share($scope.cit+"\n"+$scope.aut, null, null, null);
 	}
