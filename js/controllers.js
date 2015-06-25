@@ -4,7 +4,7 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
 
  document.addEventListener("deviceready", function () {
 
-   /*   var now = new Date().getTime();
+      var now = new Date().getTime();
       var _10SecondsFromNow = new Date(now + 15 * 1000);
 
       $cordovaLocalNotification.schedule({
@@ -14,7 +14,7 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
         at: _10SecondsFromNow
       }).then(function (result) {
         // ...
-      });*/
+      });
 
     $scope.showAlert = function() {
          var alertPopup = $ionicPopup.alert({
