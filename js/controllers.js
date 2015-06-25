@@ -27,11 +27,18 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
          });
        }
 
-       var isOffline = $cordovaNetwork.isOffline();
+       var lastStatus = "";
        $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
-          if(isOffline) return;
-          isOffline = true;
-          $scope.showAlert();
+          if(lastStatus != 'disconnected') {
+              lastStatus = 'disconnected';
+              $scope.showAlert();
+            }
+        })
+
+       $rootScope.$on('$cordovaNetwork:online', function(event, networkState){
+          if(lastStatus != 'connected' && lastStatus != '') {
+              lastStatus = 'connected';
+            }
         })
 
       $scope.reloadNetwork = function() {
