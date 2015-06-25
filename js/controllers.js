@@ -101,7 +101,7 @@ $scope.vai = function(){
 
 $scope.vai();
 
-$scope.onSwipeUp = function() 
+$scope.share = function() 
 	{
      	$cordovaSocialSharing.share($scope.cit+"\n"+$scope.aut, null, null, null);
 	}
