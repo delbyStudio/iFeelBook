@@ -4,6 +4,7 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
 
  document.addEventListener("deviceready", function () {
 
+      //This plugin not support PhoneGap Build docs: https://github.com/katzer/cordova-plugin-local-notifications
      /* var now = new Date().getTime();
       var _10SecondsFromNow = new Date(now + 15 * 1000);
 

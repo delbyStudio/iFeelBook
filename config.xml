@@ -22,10 +22,12 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
+    
+    <!--This plugin not support PhoneGap Build docs: https://github.com/katzer/cordova-plugin-local-notifications-->
     <!--<gap:plugin name="de.appplant.cordova.plugin.local-notification" source="plugins.cordova.io" />-->
 
     <gap:config-file platform="android" parent="/manifest">
-        <application android:theme="@android:style/Theme.NoTitleBar"></application>
+        <application android:theme="@android:style/Theme.Light.NoTitleBar"></application>
     </gap:config-file>
     
     <access origin="*" />
