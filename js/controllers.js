@@ -27,15 +27,16 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
          });
        }
 
-       $scope.reloadNetwork = function() {
+      $scope.reloadNetwork = function() {
        $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
-      $scope.showAlert();
-    })
+          $scope.showAlert();
+        })
     }
+
+    $scope.reloadNetwork();
 
  })
 
- $scope.reloadNetwork();
 
   $scope.back = function(){
     $scope.colour=[0,1,2,3,4];
