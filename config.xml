@@ -24,7 +24,7 @@
     <!--<gap:plugin name="de.appplant.cordova.plugin.local-notification" source="plugins.cordova.io" />-->
 
     <gap:config-file platform="android" parent="/manifest">
-        <activity android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <application android:theme="@android:style/Theme.NoTitleBar"></application>
     </gap:config-file>
     
     <access origin="*" />
