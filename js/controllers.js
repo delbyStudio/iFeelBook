@@ -1,6 +1,6 @@
 angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova'])
 
-.controller('AppCtrl', function($scope, $cordovaNetwork, $ionicPopup, $cordovaLocalNotification) {
+.controller('AppCtrl', function($scope, $cordovaNetwork, $ionicPopup, $rootScope, $cordovaLocalNotification) {
 
  document.addEventListener("deviceready", function () {
 
@@ -23,19 +23,17 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
            template: 'Check your connection and try again.'
          });
          alertPopup.then(function(res) {
-           $scope.reloadNetwork();
+
          });
        }
 
-    $scope.reloadNetwork = function() {
-    var isOffline = $cordovaNetwork.isOffline();
-    if(isOffline)
-    {
+       $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
       $scope.showAlert();
-      }
-    }
+    })
 
-    $scope.reloadNetwork();
+    $scope.reloadNetwork = function() {
+      $scope.showAlert();
+    }
 
  })
 
