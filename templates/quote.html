@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true" ng-class="{'positive': colourx==0, 'calm': colourx==1, 'balanced': colourx==2, 'assertive': colourx==3, 'royal': colourx==4}">
+<ion-view hide-nav-bar="true" ng-class="{'background-positive': colourx==0, 'background-calm': colourx==1, 'background-balanced': colourx==2, 'background-assertive': colourx==3, 'background-royal': colourx==4}">
   <ion-content on-swipe-left="vai()" on-double-tap="share()" has-bouncing="false" on-swipe-right="vai()" scrollbar-y="false" class="padding cit">
           <h2 class="fadein fadeout" style="color:#FFF; text-shadow: 1px 0px 2px #222;" ng-show="giorni.$resolved && cit && aut">{{cit}}</h2>
           <h3 ng-show="giorni.$resolved && cit && aut" class="fadein fadeout" style="font-style:italic; color:#FFF; text-shadow: 1px 0px 2px #222;">{{aut}}</h3>

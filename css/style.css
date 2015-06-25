@@ -29,27 +29,23 @@
   text-align: center;
 }
 
-.positive {
+.background-positive {
   background-color: #387ef5;
 }
 
-.calm {
+.background-calm {
 background-color: #11c1f3;
 }
 
-.balanced {
+.background-balanced {
   background-color: #33cd5f;
 }
 
-.assertive {
+.background-assertive {
   background-color: #ef473a;
 }
 
-.text-assertive {
-  color: #ef473a;
-}
-
-.royal {
+.background-royal {
   background-color: #886aea;
 }
 

@@ -1,16 +1,33 @@
 <ion-view view-title="Settings and Info">
-  <ion-content>
+<ion-nav-bar class="bar-stable">
+  <ion-nav-back-button>Back</ion-nav-back-button>
+</ion-nav-bar>
+<div class="bar bar-subheader bar-assertive">
+  <h2 class="title"><i class="icon ion-nuclear"></i> Attention! Work in progress... <i class="icon ion-nuclear"></i></h2>
+</div>
+  <ion-content class="has-subheader">
   <ul class="list">
-  <li class="item item-toggle">
-     Inviami una notifica ogni giorno
-     <label class="toggle toggle-assertive">
-       <input type="checkbox">
+  <div class="item item-divider">
+    Notification
+  </div>
+  <li class="item item-toggle">Enable daily alert (disabled)
+     <label class="toggle toggle-balanced">
+       <input disabled type="checkbox">
        <div class="track">
          <div class="handle"></div>
        </div>
      </label>
   </li>
+  <div class="item item-divider">
+    About iFeelBook
+  </div>
+  <a class="item" href="#">
+    Facebook page
+  </a>
+  <a class="item" href="#">
+    Twitter page
+  </a>
   </ul>
-    <h4>iFeelBook v0.5.5<br>Copyright&copy;2015 Davide del Buono</h4>
+    <h4 class="padding center">iFeelBook v0.5.3<br>&copy; 2015 Davide del Buono</h4>
   </ion-content>
 </ion-view>

@@ -17,9 +17,9 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
         // ...
       });*/
 
-    $scope.showAlert = function() {
+ /*   $scope.showAlert = function() {
          var alertPopup = $ionicPopup.alert({
-           title: '<span class="text-assertive">Connection error!</span>',
+           title: '<span class="assertive">Connection error!</span>',
            template: 'Check your connection and try again.'
          });
          alertPopup.then(function(res) {
@@ -45,7 +45,7 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
         var isOffline = $cordovaNetwork.isOffline();
         if(isOffline)
           $scope.showAlert();
-        }
+        }*/
 
  })
 
@@ -62,6 +62,10 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
 
 $scope.back();
   
+})
+
+.controller('SettingsCtrl', function($scope) {
+
 })
 
 .controller('QuotesCtrl', function($scope) {
