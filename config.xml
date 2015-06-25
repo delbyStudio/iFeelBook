@@ -2,6 +2,7 @@
 
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android   = "http://schemas.android.com/apk/res/android"
         id        = "com.ifeelbook.www"
         version   = "0.5">
 
@@ -21,11 +22,11 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
-    <!--<gap:plugin name="de.appplant.cordova.plugin.local-notification" source="plugins.cordova.io" />
+    <!--<gap:plugin name="de.appplant.cordova.plugin.local-notification" source="plugins.cordova.io" />-->
 
     <gap:config-file platform="android" parent="/manifest">
         <application android:theme="@android:style/Theme.NoTitleBar"></application>
-    </gap:config-file>-->
+    </gap:config-file>
     
     <access origin="*" />
 
