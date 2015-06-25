@@ -21,7 +21,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
-    <gap:plugin name="de.appplant.cordova.plugin.local-notification" source="plugins.cordova.io" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" source="plugins.cordova.io" version="7.8" />
 
     <!--<gap:config-file platform="android" parent="/manifest" overwrite="true">
         <application android:theme="@android:style/Theme.NoTitleBar"></application>
