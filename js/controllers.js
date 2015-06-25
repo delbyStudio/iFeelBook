@@ -28,7 +28,10 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
        }
 
        $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
+          var isOffline = $cordovaNetwork.isOffline();
+            if(isOffline)
           $scope.showAlert();
+          }
         })
 
       $scope.reloadNetwork = function() {
