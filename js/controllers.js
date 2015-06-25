@@ -17,7 +17,7 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
         // ...
       });*/
 
- /*   $scope.showAlert = function() {
+       $scope.showAlert = function() {
          var alertPopup = $ionicPopup.alert({
            title: '<span class="assertive">Connection error!</span>',
            template: 'Check your connection and try again.'
@@ -45,7 +45,7 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
         var isOffline = $cordovaNetwork.isOffline();
         if(isOffline)
           $scope.showAlert();
-        }*/
+        }
 
  })
 
