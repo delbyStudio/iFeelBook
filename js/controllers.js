@@ -1,8 +1,8 @@
 angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova'])
 
-.controller('AppCtrl', function($scope, $cordovaNetwork, $ionicPopup, $rootScope, $cordovaLocalNotification) {
+.controller('AppCtrl', function($scope, $cordovaNetwork, $ionicPlatform, $ionicPopup, $rootScope, $cordovaLocalNotification) {
 
- document.addEventListener("deviceready", function () {
+ $ionicPlatform.ready(function() {
 
       //This plugin not support PhoneGap Build docs: https://github.com/katzer/cordova-plugin-local-notifications
      /* var now = new Date().getTime();
@@ -28,8 +28,6 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
        }
 
        $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
-          var isOffline = $cordovaNetwork.isOffline();
-            if(isOffline)
           $scope.showAlert();
         })
 
