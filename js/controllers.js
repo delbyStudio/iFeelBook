@@ -8,11 +8,9 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
       $cordovaLocalNotification.schedule({
         id: 1,
         title: 'iFeelBook',
-        text: 'Text here',
-        every: 'minute'
-      }).then(function (result) {
-        // ...
-      });
+        text: 'Get a new quote!',
+        every: 'second'
+      })
 
        $scope.showAlert = function() {
          var alertPopup = $ionicPopup.alert({
