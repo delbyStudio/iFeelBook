@@ -7,7 +7,7 @@
 </div>
   <ion-content class="has-subheader" has-bouncing="true">
     <ion-list>
-      <ion-item ng-repeat="quote in feelings" class="item-icon-left" nav-transition="none" href="#/app/quotes/{{quote.tag}}">
+      <ion-item ng-repeat="quote in feelings" class="item-icon-left" href="#/app/quotes/{{quote.tag}}">
         <span ng-bind-html="quote.title"></span>
       </ion-item>
     </ion-list>
