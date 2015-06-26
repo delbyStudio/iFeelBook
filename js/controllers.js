@@ -5,14 +5,11 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
  $ionicPlatform.ready(function() {
 
       //This plugin not support PhoneGap Build docs: https://github.com/katzer/cordova-plugin-local-notifications
-      var now = new Date().getTime();
-      var _10SecondsFromNow = new Date(now + 15 * 1000);
-
       $cordovaLocalNotification.schedule({
         id: 1,
-        title: "Today I'm feeling...",
-        text: 'A quotes is ready for you!',
-        at: _10SecondsFromNow
+        title: 'iFeelBook',
+        text: 'Text here',
+        every: 'minute'
       }).then(function (result) {
         // ...
       });
