@@ -22,9 +22,8 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
-    <!--<gap:plugin name='org.crosswalk.engine' />-->
+    <gap:plugin name='org.crosswalk.engine' />
     
-    <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />
     <!--This plugin not support PhoneGap Build docs: https://github.com/katzer/cordova-plugin-local-notifications-->
     <!--<gap:plugin name="de.appplant.cordova.plugin.local-notification" source="plugins.cordova.io" />-->
 

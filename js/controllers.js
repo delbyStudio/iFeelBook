@@ -5,12 +5,12 @@ angular.module('ifeelbook.controllers', ['ngResource', 'ngAnimate', 'ngCordova']
  $ionicPlatform.ready(function() {
 
       //This plugin not support PhoneGap Build docs: https://github.com/katzer/cordova-plugin-local-notifications
-      $cordovaLocalNotification.schedule({
+      /*$cordovaLocalNotification.schedule({
         id: 1,
         title: 'iFeelBook',
         text: 'Get a new quote!',
-        every: 'second'
-      })
+        every: 'day'
+      })*/
 
        $scope.showAlert = function() {
          var alertPopup = $ionicPopup.alert({
